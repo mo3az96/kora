@@ -5,6 +5,8 @@
   --back-color: #f2f6f8;
   --bs-gutter-x: 15px;
   font-size: 16px;
+  --sal-duration: 1s
+;
 }
 
 body {
@@ -52,6 +54,29 @@ img {
   image-rendering: -o-crisp-edges;
   image-rendering: -webkit-optimize-contrast;
   -ms-interpolation-mode: nearest-neighbor;
+}
+
+.scroll-up {
+  border-radius: 50%;
+  line-height: 48px;
+  width: 48px;
+  text-align: center;
+  position: fixed;
+  bottom: 40px;
+  inset-inline-end: 30px;
+  z-index: 9;
+  cursor: pointer;
+  display: none;
+  font-size: 21px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  color: #fff;
+  background-color: var(--secondery-color);
+}
+
+.scroll-up:hover {
+  background-color: var(--primary-color);
+  color: #fff;
 }
 
 @font-face {
@@ -273,28 +298,38 @@ main {
 }
 
 section {
-  padding: 70px 0;
+  padding: 150px 0;
+  position: relative;
 }
 
 section:nth-of-type(even) {
-  -webkit-clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
-          clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
   background-color: var(--back-color);
-  padding: 150px 0;
 }
 
-@media (max-width: 991px) {
-  section:nth-of-type(even) {
-    -webkit-clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
-            clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
-    padding: 70px 0;
-  }
+section:nth-of-type(even)::after {
+  -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+          clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+  background-color: var(--back-color);
+  content: "";
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100%;
 }
 
-section:nth-of-type(even):nth-last-of-type(2) {
-  padding: 70px 0;
-  -webkit-clip-path: unset;
-          clip-path: unset;
+section:nth-of-type(even)::before {
+  -webkit-clip-path: polygon(100% 0, 0 0, 0 100%);
+          clip-path: polygon(100% 0, 0 0, 0 100%);
+  background-color: var(--back-color);
+  content: "";
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
 }
 
 h1 {
@@ -512,18 +547,11 @@ main::after {
   width: 177px;
   max-width: calc(50% - 5px);
   text-decoration: none;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
 
 .main-download a:first-child {
   -webkit-margin-end: 10px;
           margin-inline-end: 10px;
-}
-
-.main-download a:hover {
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
 }
 
 @-webkit-keyframes typing {

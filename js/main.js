@@ -1,7 +1,13 @@
 $(window).on("load", function () {
   $("body").removeClass("overflow");
+  sal();
 });
 $(document).ready(function () {
+  $(window).scroll(function () {
+    $(this).scrollTop() >= 500
+      ? $(".scroll-up").show()
+      : $(".scroll-up").hide();
+  });
   new bootstrap.ScrollSpy(document.body, {
     target: "#fixedNavbar",
   });
