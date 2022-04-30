@@ -13,6 +13,7 @@ body {
   position: relative;
   font-family: IBM;
   font-weight: normal;
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -297,9 +298,21 @@ main {
   height: 100vh;
 }
 
+@media (max-width: 767px) {
+  main .container {
+    overflow: hidden;
+  }
+}
+
 section {
   padding: 150px 0;
   position: relative;
+}
+
+@media (max-width: 767px) {
+  section .container {
+    overflow: hidden;
+  }
 }
 
 section:nth-of-type(even) {
