@@ -21,8 +21,8 @@ $(document).ready(function () {
     if ($(window).width() <= 767) {
       $(".menu-btn").removeClass("active");
       $(".logo").removeClass("active");
-      $(".navbar").slideToggle();
-      $("body").toggleClass("overflow");
+      $(".navbar").slideUp();
+      $("body").removeClass("overflow");
     }
   });
 
