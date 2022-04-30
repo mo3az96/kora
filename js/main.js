@@ -21,9 +21,8 @@ $(document).ready(function () {
     if ($(window).width() <= 767) {
       $(".menu-btn").removeClass("active");
       $(".logo").removeClass("active");
-      $(".navbar").fadeOut(300);
-      $(".header").removeClass("active");
-      $("body").removeClass("overflow");
+      $(".navbar").slideToggle();
+      $("body").toggleClass("overflow");
     }
   });
 
@@ -47,17 +46,7 @@ $(document).ready(function () {
   $(".menu-btn").on("click", function (e) {
     $(this).toggleClass("active");
     $(".logo").toggleClass("active");
-    $(".navbar").fadeToggle(300);
-    $(".header").toggleClass("active");
-    setTimeout(() => {
-      $("html,body").animate(
-        {
-          scrollLeft: 0,
-        },
-        0
-      );
-    }, 520);
-
+    $(".navbar").slideToggle();
     $("body").toggleClass("overflow");
   });
 });

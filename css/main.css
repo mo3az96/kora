@@ -872,6 +872,7 @@ textarea.form-control {
     bottom: 0;
     z-index: 8;
     display: none;
+    background-color: rgba(25, 48, 151, 0.99);
   }
   .navbar .nav {
     display: -webkit-box;
@@ -911,46 +912,5 @@ textarea.form-control {
   .navbar .nav .nav-item.xs-link {
     display: block;
   }
-}
-
-.splash {
-  position: absolute;
-  top: 40px;
-  inset-inline-end: 40px;
-  width: 1px;
-  height: 1px;
-  display: none;
-}
-
-@media (max-width: 767px) {
-  .splash {
-    display: block;
-  }
-}
-
-.splash::after {
-  content: "";
-  display: block;
-  position: absolute;
-  border-radius: 50%;
-  background-color: var(--primary-color);
-  width: 284vmax;
-  height: 284vmax;
-  top: -142vmax;
-  inset-inline-start: -142vmax;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
-  z-index: 8;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-
-.header.active > .splash::after {
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-  -webkit-transform: scale(1);
-          transform: scale(1);
 }
 /*# sourceMappingURL=main.css.map */
