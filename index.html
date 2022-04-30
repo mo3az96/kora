@@ -21,6 +21,7 @@
           <a href="index.html" class="logo">
             <img src="images/logo.png" class="img-fluid" />
           </a>
+          <div class="splash"></div>
           <nav class="navbar" id="fixedNavbar">
             <ul class="nav nav-pills">
               <li class="nav-item">
@@ -49,6 +50,9 @@
               </li>
             </ul>
           </nav>
+          <a role="button" class="menu-btn">
+            <i class="las la-bars"></i>
+          </a>
         </div>
       </div>
     </header>
@@ -73,12 +77,12 @@
             </p>
             <div class="main-download">
               <a href="https://apps.apple.com/sa/app/kora-station/id1521524061">
-                <img src="images/downloadAppStore.png" />
+                <img src="images/downloadAppStore.png" class="img-fluid"/>
               </a>
               <a
                 href="https://play.google.com/store/apps/details?id=stations.sports.com.korastation"
               >
-                <img src="images/downloadGooglePlay.png" />
+                <img src="images/downloadGooglePlay.png" class="img-fluid"/>
               </a>
             </div>
           </div>
@@ -87,6 +91,13 @@
           </div>
         </div>
       </div>
+      <a
+        href="#about"
+        class="scroll-down"
+        onclick='$(".nav-item:nth-of-type(2)>.nav-link").trigger( "click" )'
+      >
+        <span></span>
+      </a>
     </main>
     <!-- End Main -->
 
@@ -94,6 +105,7 @@
     <section id="about">
       <div class="container">
         <div class="about">
+          <h2 class="about-title xs-title">عن كورة ستيشن</h2>
           <div class="about-text">
             <h2 class="about-title">عن كورة ستيشن</h2>
             <p class="about-p">
@@ -117,6 +129,7 @@
     <section id="players">
       <div class="container">
         <div class="about players">
+          <h2 class="about-title xs-title">اللاعبين</h2>
           <div class="about-img">
             <img src="images/players.png" class="img-fluid" />
           </div>
@@ -139,6 +152,7 @@
     <section id="stadiums">
       <div class="container">
         <div class="about stadiums">
+          <h2 class="about-title xs-title">الملاعب</h2>
           <div class="about-text">
             <h2 class="about-title">الملاعب</h2>
             <p class="about-p">
@@ -159,6 +173,7 @@
     <section id="academies">
       <div class="container">
         <div class="about academies">
+          <h2 class="about-title xs-title">الأكاديميات</h2>
           <div class="about-img">
             <img src="images/academies.png" class="img-fluid" />
           </div>
@@ -182,6 +197,7 @@
     <section id="cafes">
       <div class="container">
         <div class="about cafes">
+          <h2 class="about-title xs-title">الكافيهات</h2>
           <div class="about-text">
             <h2 class="about-title">الكافيهات</h2>
             <p class="about-p">
@@ -201,6 +217,7 @@
     <section id="coaches">
       <div class="container">
         <div class="about coaches">
+          <h2 class="about-title xs-title">المدربين</h2>
           <div class="about-img">
             <img src="images/coaches.png" class="img-fluid" />
           </div>
