@@ -72,11 +72,11 @@ img {
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   color: #fff;
-  background-color: var(--secondery-color);
+  background-color: var(--primary-color);
 }
 
 .scroll-up:hover {
-  background-color: var(--primary-color);
+  background-color: var(--secondery-color);
   color: #fff;
 }
 
