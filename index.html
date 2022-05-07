@@ -63,11 +63,19 @@
       <video src="images/video.mp4" loop autoplay muted></video>
       <div class="container">
         <div class="main">
-          <div class="main-text">
+          <div class="main-titles xs-main-titles">
             <div class="main-title-cont">
-              <h1 class="main-title">كورة ستيشن</h1>
+              <h1 class="main-title" data-sal="slide-up" style="--sal-delay: 0.2s">كورة ستيشن</h1>
             </div>
-            <h2 class="main-subtitle">هنا تبدأ مسيرتك وشغفك الرياضي</h2>
+            <h2 class="main-subtitle" data-sal="slide-up" style="--sal-delay: 0.1s">هنا تبدأ مسيرتك وشغفك الرياضي</h2>
+          </div>
+          <div class="main-text">
+            <div class="main-titles">
+              <div class="main-title-cont">
+                <h1 class="main-title">كورة ستيشن</h1>
+              </div>
+              <h2 class="main-subtitle">هنا تبدأ مسيرتك وشغفك الرياضي</h2>
+            </div>
             <p class="main-p" data-sal="slide-left" style="--sal-delay: 0.2s">
               هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما
               سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات
@@ -275,7 +283,11 @@
               ستيشن يضمن لك انتشار اوسع لخدماتك
             </p>
           </div>
-          <div class="about-img" data-sal="flip-right" style="--sal-delay: 0.4s">
+          <div
+            class="about-img"
+            data-sal="flip-right"
+            style="--sal-delay: 0.4s"
+          >
             <img src="images/cafes.png" class="img-fluid" />
           </div>
         </div>
@@ -347,7 +359,13 @@
                 placeholder="رسالتك...."
               ></textarea>
             </div>
-            <button class="form-submit" data-sal="fade" style="--sal-delay: 0.8s">إرسال</button>
+            <button
+              class="form-submit"
+              data-sal="fade"
+              style="--sal-delay: 0.8s"
+            >
+              إرسال
+            </button>
           </form>
         </div>
       </div>
