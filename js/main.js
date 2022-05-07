@@ -1,6 +1,8 @@
 $(window).on("load", function () {
   $("body").removeClass("overflow");
-  sal();
+  sal({
+    once: false,
+  });
 });
 $(document).ready(function () {
   $(window).scroll(function () {
