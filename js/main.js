@@ -3,8 +3,14 @@ $(window).on("load", function () {
   sal({
     once: false,
   });
+  for (let i = 0; i < 2; i++) {
+    $("video").get(i).play();
+  }
 });
 $(document).ready(function () {
+  for (let i = 0; i < 2; i++) {
+    $("video").get(i).play();
+  }
   $(window).scroll(function () {
     $(this).scrollTop() >= 500
       ? $(".scroll-up").show()
